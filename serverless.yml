@@ -1,0 +1,25 @@
+service: api-user
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-1
+  stage: dev
+  versionFunctions: false
+  deploymentBucket: zadir-sls-deployments
+
+plugins:
+  - serverless-offline
+
+functions:
+  graphql:
+    handler: lambda.graphql
+    events:
+      - http:
+          path: /
+          method: post
+          cors: true
+      - http:
+          path: /
+          method: get
+          cors: true
