@@ -5,13 +5,13 @@ import { APIGatewayProxyEvent, Context, Callback } from 'aws-lambda';
 
 const resolvers = {
   Query: {
-    allPosts: () => 'post',
+    allUsers: () => 'users here',
   },
 };
 
 const createHandler = async () => {
   const server = new ApolloServer({
-    playground: { endpoint: '/dev' },
+    playground: { endpoint: '/users' },
     schema: buildFederatedSchema([{ typeDefs, resolvers }]),
   });
   return server.createHandler();

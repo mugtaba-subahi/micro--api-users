@@ -1,4 +1,4 @@
-service: api-user
+service: api-users
 
 provider:
   name: aws
@@ -6,10 +6,11 @@ provider:
   region: eu-west-1
   stage: dev
   versionFunctions: false
-  deploymentBucket: zadir-sls-deployments
+  deploymentBucket: zadif-sls-deployments
 
 plugins:
   - serverless-offline
+  - serverless-domain-manager
 
 functions:
   graphql:
@@ -23,3 +24,9 @@ functions:
           path: /
           method: get
           cors: true
+
+custom:
+  customDomain:
+    domainName: 'zadif.com'
+    basePath: users
+    stage: dev
