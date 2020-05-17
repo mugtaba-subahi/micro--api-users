@@ -29,6 +29,6 @@ functions:
 
 custom:
   customDomain:
-    domainName: 'api.zadif.com'
+    domainName: api.zadif.com
     basePath: users
     stage: dev
