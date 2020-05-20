@@ -9,11 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container: chabu/docker-serverless:slim
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
 
       - name: Install Dependencies
-        run: yarn --frozen-lockfile
+        run: yarn check --integrity && yarn --frozen-lockfile
 
       - name: Compile TypeScript
         run: tsc
