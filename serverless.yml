@@ -7,16 +7,10 @@ provider:
   stage: dev
   versionFunctions: false
   deploymentBucket: zadif-sls-deployments
-  credentials:
-    accessKeyId: ${ env:AWS_ACCESS_KEY_ID }
-    secretAccessKey: ${ env:AWS_SECRET_ACCESS_KEY }
 
 plugins:
   # - serverless-offline
   - serverless-domain-manager
-
-package:
-  individually: true
 
 functions:
   graphql:
