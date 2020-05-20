@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Verify yarn.lock Integrity
-        run: yarn check --integrity
+      - name: Verify yarn.lock
+        run: yarn check --verify-tree
 
       - name: Install Dependencies
         run: yarn --frozen-lockfile
