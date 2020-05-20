@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Verify 'yarn.lock' Integrity
+      - name: Verify yarn.lock Integrity
         run: yarn check --integrity
 
       - name: Install Dependencies
