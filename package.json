@@ -6,11 +6,12 @@
   "scripts": {
     "watch": "tsc -w",
     "sls-offline": "sls offline --useChildProcesses",
-    "start": "npm-run-all -p watch sls-offline"
+    "start": "npm-run-all -p watch sls-offline",
+    "install": "yarn install"
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn install"
+      "pre-push": "install"
     }
   },
   "dependencies": {
