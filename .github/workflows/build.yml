@@ -13,8 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Verify 'yarn.lock' Integrity
+        run: yarn check --integrity
+
       - name: Install Dependencies
-        run: yarn check --integrity && yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Compile TypeScript
         run: tsc
