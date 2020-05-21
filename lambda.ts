@@ -5,7 +5,7 @@ import { APIGatewayProxyEvent, Context, Callback } from 'aws-lambda';
 
 const resolvers = {
   Query: {
-    allUsers: () => 'new user',
+    allUsers: () => 'new userwe',
   },
 };
 
