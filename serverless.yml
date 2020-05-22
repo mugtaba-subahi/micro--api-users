@@ -9,8 +9,7 @@ provider:
   deploymentBucket: zadif-sls-deployments
 
 plugins:
-  - serverless-plugin-optimize
-  # - serverless-offline
+  - serverless-offline
 
 functions:
   graphql:
@@ -21,10 +20,10 @@ functions:
           method: post
           cors:
             origins:
-              - https://api.zadif.com
+              - https://api.zadife.com
       - http:
           path: /
           method: get
           cors:
             origins:
-              - https://api.zadif.com
+              - https://api.zadife.com
