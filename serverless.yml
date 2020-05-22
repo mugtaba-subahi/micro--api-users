@@ -18,12 +18,8 @@ functions:
       - http:
           path: /
           method: post
-          cors:
-            origin: 'https://api.zadife.com'
-            allowCredentials: true
+          cors: true
       - http:
           path: /
           method: get
-          cors:
-            origin: 'https://api.zadife.com'
-            allowCredentials: true
+          cors: true
