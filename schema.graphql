@@ -1,7 +1,0 @@
-type User {
-  title: String
-}
-
-type Query {
-  allUsers: String
-}
