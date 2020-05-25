@@ -5,7 +5,7 @@ import typeDefs from './schema';
 
 const resolvers = {
   Query: {
-    allUsers: () => 'user here',
+    allUsers: () => 'user',
   },
 };
 
