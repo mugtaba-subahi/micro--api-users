@@ -7,7 +7,7 @@ const typeDefs = importSchema('schema.graphql');
 
 const resolvers = {
   Query: {
-    allUsers: () => 'new user',
+    allUsers: () => 'new user - now using npm ci',
   },
 };
 
