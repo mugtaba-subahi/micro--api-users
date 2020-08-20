@@ -16,9 +16,6 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Link Webpack
-        run: npm link webpack
-
       - name: Compile TypeScript
         run: tsc
 
